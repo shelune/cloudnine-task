@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "MillerBanner";
+  src: url("./MillerBanner-Light.woff2") format("woff2"),
+    url("./MillerBanner-Light.woff") format("woff"),
+    url("./MillerBanner-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLight";
+  src: url("./HelveticaNeueLt.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

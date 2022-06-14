@@ -1,0 +1,22 @@
+@import "../assets/fonts/fonts";
+@import "./reset";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "HelveticaNeueLight", sans-serif;
+  // to match the background color of the design, purely presentational
+  background-color: rgb(30, 30, 30);
+}
+
+h1 {
+  font-family: "MillerBanner", serif;
+}

@@ -1,0 +1,83 @@
+@import "../../styles/utils/index";
+
+.container {
+  height: 100%;
+}
+
+.header {
+  height: 64px;
+  background-color: $white;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $pale-gold;
+
+  .title {
+    margin: 0;
+  }
+}
+
+.settingsIcon {
+  cursor: pointer;
+}
+
+.filterBar {
+  padding: 20px 16px;
+  width: 100%;
+  border-bottom: 1px solid $pale-gold;
+}
+
+.filterBarHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterBarText {
+  @include text-subtitle-md;
+}
+
+.priceInput {
+  @include text-subtitle-md;
+  width: 60px;
+  border: none;
+  border-bottom: 1px solid $pale-gold;
+  border-radius: 0;
+  padding: 0;
+  outline: none;
+  margin-left: 2px;
+}
+
+.filterBarToggle {
+  @include icon-sm;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &.isOpen {
+    transform: rotate(90deg);
+  }
+}
+
+.filterBarBody {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+
+  &.isOpen {
+    max-height: 52px;
+    opacity: 1;
+    visibility: visible;
+    padding: 8px 0;
+  }
+}
+.salonListEmpty {
+  padding: 16px;
+}

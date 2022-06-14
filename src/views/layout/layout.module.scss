@@ -1,0 +1,9 @@
+@import "../../styles/utils/index";
+
+.appWrapper {
+  max-width: $breakpoint-mobile;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: $white;
+  overflow: auto;
+}

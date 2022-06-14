@@ -1,0 +1,79 @@
+@import "../../../styles/utils/index";
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.rowContent {
+  height: 100%;
+  width: 100%;
+  padding: 16px 16px 16px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 0.5px solid $gray-border;
+}
+
+.rowLeft {
+  width: 36px;
+  padding-top: 2px;
+}
+
+.rowCenter {
+  width: 100%;
+}
+
+.salonName {
+  @include text-title-sm;
+  margin: 0;
+}
+
+.salonRating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+
+  .star {
+    @include icon-xs;
+    margin-right: 2px;
+  }
+}
+
+.salonFeedbackCount {
+  @include text-subtitle-sm;
+  color: $gray;
+  transform: translateY(1px);
+}
+
+.salonAddress {
+  color: $gray;
+  margin-top: 6px;
+}
+
+.rowRight {
+  padding-top: 2px;
+  width: 80px;
+  text-align: right;
+}
+
+.salonDuration {
+  @include text-subtitle-md;
+  color: $gray;
+  margin-top: 8px;
+}
+
+.rowNav {
+  margin-left: auto;
+  height: 100%;
+  border-bottom: 0.5px solid $gray-border;
+}
+
+.rowNavIcon {
+  @include icon-sm;
+  transform: rotate(180deg);
+}
