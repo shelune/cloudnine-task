@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React, { FC } from "react";
 import type { SalonItem } from "./types";
 
@@ -39,7 +40,9 @@ export const SalonRow: FC<SalonItemProps> = ({ salon }) => (
       </div>
     </div>
     <div className={css.rowNav}>
-      <ChevronIcon className={css.rowNavIcon} />
+      <Link to={`/salons/${salon.id}`}>
+        <ChevronIcon className={css.rowNavIcon} />
+      </Link>
     </div>
   </div>
 );
