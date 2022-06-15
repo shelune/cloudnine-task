@@ -1,11 +1,16 @@
 @import "../../../styles/utils/index";
 
+.salonRowWrapper {
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 0 16px;
   cursor: pointer;
+  color: $black;
 }
 
 .rowContent {

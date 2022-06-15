@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import { ReactComponent as ChevronIcon } from "../../assets/icons/chevron-left.svg";
 import { ReactComponent as SettingsIcon } from "../../assets/icons/filters.svg";
-import salons from "../../assets/data/MOCK_DATA.json";
 
 import css from "./salon-list.module.scss";
 import { SalonRow } from "./salon-item/salon-item";
@@ -12,19 +11,22 @@ import type { SalonItem } from "./salon-item/types";
 
 const DEFAULT_MIN_PRICE = 0;
 const DEFAULT_MAX_PRICE = 100;
-const MOCK_SALONS: SalonItem[] = salons.slice(0, 100);
 
-export const SalonListView: FC = () => {
+type Props = {
+  salons: SalonItem[];
+};
+
+export const SalonListView: FC<Props> = ({ salons }) => {
   const [showFilters, setShowFilters] = useState(false);
   const [minPrice, setMinPrice] = useState(DEFAULT_MIN_PRICE);
   const [maxPrice, setMaxPrice] = useState(DEFAULT_MAX_PRICE);
 
   const filteredSalons = useMemo(
     () =>
-      MOCK_SALONS.filter(
+      salons.filter(
         (salon) => salon.price >= minPrice && salon.price <= maxPrice,
       ),
-    [maxPrice, minPrice],
+    [maxPrice, minPrice, salons],
   );
 
   return (
@@ -79,6 +81,7 @@ export const SalonListView: FC = () => {
               placeholder={`${minPrice}`}
               value={minPrice}
               onChange={(e) => setMinPrice(parseInt(e.target.value, 10))}
+              data-testid="min-price"
             />
           </div>
           <div className={css.filterBarText}>and $ </div>
@@ -90,6 +93,7 @@ export const SalonListView: FC = () => {
               placeholder={`${maxPrice}`}
               value={maxPrice}
               onChange={(e) => setMaxPrice(parseInt(e.target.value, 10))}
+              data-testid="max-price"
             />
           </div>
         </div>
@@ -97,7 +101,7 @@ export const SalonListView: FC = () => {
       <div className={css.salonList}>
         {filteredSalons.length ? (
           filteredSalons.map((salon) => (
-            <SalonRow key={salon.id} salon={salon} />
+            <SalonRow key={salon.id} salon={salon} data-testid="salon-row" />
           ))
         ) : (
           <div className={css.salonListEmpty}>

@@ -21,6 +21,7 @@ $breakpoint-desktop: 1024px;
 
 @mixin icon-base {
   display: inline-block;
+  cursor: pointer;
   @content;
 
   svg {
@@ -45,4 +46,8 @@ $breakpoint-desktop: 1024px;
   @include icon-base;
   width: 10px;
   height: 10px;
+}
+
+@mixin shadow-light {
+  box-shadow: 0px 0.5px 0px #eeeeee;
 }

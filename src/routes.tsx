@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./views/layout/layout";
-import { SalonListView } from "./views/salon-list/salon-list";
+import { SalonListView } from "./views/salon-list";
 import { SalonView } from "./views/salon/salon";
 import { HomeView } from "./views/home/home";
 
