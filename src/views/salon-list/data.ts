@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 import { SalonListView } from "./salon-list";
-import type { SalonItem } from "./salon-item/types";
+import type { SalonItem } from "./salon-row/types";
 
 import salons from "../../assets/data/MOCK_DATA.json";
 

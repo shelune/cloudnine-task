@@ -6,8 +6,8 @@ import { ReactComponent as ChevronIcon } from "../../assets/icons/chevron-left.s
 import { ReactComponent as SettingsIcon } from "../../assets/icons/filters.svg";
 
 import css from "./salon-list.module.scss";
-import { SalonRow } from "./salon-item/salon-item";
-import type { SalonItem } from "./salon-item/types";
+import { SalonRow } from "./salon-row/salon-row";
+import type { SalonItem } from "./salon-row/types";
 
 const DEFAULT_MIN_PRICE = 0;
 const DEFAULT_MAX_PRICE = 100;

@@ -14,7 +14,7 @@ import salonImage from "../../assets/images/salon-1.jpeg";
 import salons from "../../assets/data/MOCK_DATA.json";
 
 import css from "./salon.module.scss";
-import type { SalonItem } from "../salon-list/salon-item/types";
+import type { SalonItem } from "../salon-list/salon-row/types";
 
 const MOCK_SALONS: SalonItem[] = salons.slice(0, 100);
 

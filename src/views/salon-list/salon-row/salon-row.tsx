@@ -6,7 +6,7 @@ import { ReactComponent as ChevronIcon } from "../../../assets/icons/chevron-lef
 import { ReactComponent as StarEmptyIcon } from "../../../assets/icons/star-empty.svg";
 import { ReactComponent as StarFilledIcon } from "../../../assets/icons/star-filled.svg";
 
-import css from "./salon-item.module.scss";
+import css from "./salon-row.module.scss";
 
 type SalonItemProps = {
   salon: SalonItem;
